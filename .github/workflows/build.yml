@@ -17,11 +17,11 @@ jobs:
         mkdir nonexistent_path
         mv my_thermal nonexistent_path
         mv mi-thermal-crypt nonexistent_path
-        mv *.sh nonexistent_path
+        mv decrypt_thermal.sh nonexistent_path
         cd nonexistent_path
         chmod 777 mi-thermal-crypt
         chmod 777 decrypt_thermal.sh
-        exec decrypt_thermal.sh
+        ./decrypt_thermal.sh
         sleep 3
 
     - uses: actions/upload-artifact@v3
