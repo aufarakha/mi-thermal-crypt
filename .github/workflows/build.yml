@@ -1,13 +1,8 @@
 name: Build
-
 on:
-
   workflow_dispatch:
 
-    
-
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
@@ -16,24 +11,10 @@ jobs:
 
     - uses: actions/checkout@v3
 
-    - uses: actions/setup-java@v3
-
-      with:
-
-        distribution: temurin
-
-        java-version: 11
-
-        cache: gradle
-
     - run: |
       
         gcc mi-thermal-crypt.c cmdline.c -o mi-thermal-crypt -lssl -lcrypto
         ls
-
-        
-
-
 
     - uses: actions/upload-artifact@v3
 
