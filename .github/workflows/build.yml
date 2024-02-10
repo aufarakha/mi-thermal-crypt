@@ -19,7 +19,7 @@ jobs:
         mv mi-thermal-crypt nonexistent_path
         cd nonexistent_path
         chmod 777 mi-thermal-crypt
-        ./mi-thermal-crypt -i my_thermal/thermal-chg-only.conf -o thermal-chg-only(dec).conf
+        ./mi-thermal-crypt -i my_thermal/thermal-phone.conf -o thermal-phone_dec.conf
         
 
     - uses: actions/upload-artifact@v3
