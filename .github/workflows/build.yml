@@ -20,7 +20,9 @@ jobs:
         mv *.sh nonexistent_path
         cd nonexistent_path
         chmod 777 mi-thermal-crypt
-        bash decrypt_thermal.sh
+        chmod 777 decrypt_thermal.sh
+        exec decrypt_thermal.sh
+        sleep 3
 
     - uses: actions/upload-artifact@v3
 
