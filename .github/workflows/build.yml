@@ -14,11 +14,8 @@ jobs:
     - run: |
       
         gcc mi-thermal-crypt.c cmdline.c -o mi-thermal-crypt -lssl -lcrypto
-        ls
         mkdir nonexistent_path
-        mv *.c nonexistent_path
-        mv mi* nonexistent_path
-        mv cmd* nonexistent_path
+        mv mi-thermal-crypt
 
     - uses: actions/upload-artifact@v3
 
