@@ -17,10 +17,10 @@ jobs:
         mkdir nonexistent_path
         mv my_thermal nonexistent_path
         mv mi-thermal-crypt nonexistent_path
+        mv *.sh nonexistent_path
         cd nonexistent_path
         chmod 777 mi-thermal-crypt
-        ./mi-thermal-crypt -i my_thermal/thermal-phone.conf -o thermal-phone_dec.conf
-        
+        bash decrypt_thermal.sh
 
     - uses: actions/upload-artifact@v3
 
