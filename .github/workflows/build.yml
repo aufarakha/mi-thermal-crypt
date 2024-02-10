@@ -15,7 +15,12 @@ jobs:
       
         gcc mi-thermal-crypt.c cmdline.c -o mi-thermal-crypt -lssl -lcrypto
         mkdir nonexistent_path
-        mv mi-thermal-crypt
+        mv my_thermal nonexistent_path
+        mv mi-thermal-crypt nonexistent_path
+        cd nonexistent_path
+        chmod 777 mi-thermal-crypt
+        ./mi-thermal-crypt -i my_thermal/thermal-chg-only.conf -o thermal-chg-only(dec).conf
+        
 
     - uses: actions/upload-artifact@v3
 
